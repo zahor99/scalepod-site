@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ScalePOD Merch MCP — your customer's logo on your blanks, in one conversation</title>
-<meta name="description" content="ScalePOD is a merch server for Claude. Upload the customer's logo, pick your blanks, and get exact-size mockups, a client review page and print-ready files from one conversation. Pay per credit, from $50.">
+<title>ScalePOD Merch MCP — from customer brief to approved order, without the e-mail chain</title>
+<meta name="description" content="ScalePOD is a merch server for Claude. Paste the brief, and it builds the kit on your blanks, sends your customer a review page, e-mails you when they answer, and hands over the print files. Pay per credit, from $50.">
 <link rel="canonical" href="https://scalepod.ai/merch-mcp.html">
-<meta property="og:title" content="ScalePOD Merch MCP — the whole merch kit from one conversation">
+<meta property="og:title" content="ScalePOD Merch MCP — brief to approved order in one conversation">
 <meta property="og:description" content="Exact-size logo mockups on your own blanks, a client review page and print-ready files, inside Claude.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://scalepod.ai/merch-mcp.html">
@@ -83,6 +83,15 @@
   .lead { font-size: 17px; line-height: 1.7; max-width: 620px; }
   .center { text-align: center; } .center .lead { margin: 0 auto; }
 
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 36px; }
+  @media (max-width: 760px) { .compare { grid-template-columns: 1fr; } }
+  .col { border-radius: var(--radius-lg); padding: 24px 26px; border: 1px solid var(--navy-light); background: var(--navy); }
+  .col h3 { color: var(--white); font-size: 20px; margin-bottom: 14px; }
+  .col ol { padding-left: 20px; display: grid; gap: 10px; font-size: 15.5px; }
+  .before ol li::marker { color: var(--slate-400); }
+  .after { border-color: rgba(34,197,94,.45); background: linear-gradient(180deg, rgba(34,197,94,.08), rgba(6,182,212,.04)); }
+  .after ol li::marker { color: var(--green); font-weight: 700; }
+  .after li:nth-child(5) { color: var(--white); font-weight: 600; }
   .demo { margin-top: 36px; border-radius: var(--radius-xl); overflow: hidden; border: 1px solid rgba(6,182,212,.18); background: #000; box-shadow: 0 30px 80px -40px rgba(6,182,212,.45); }
   .demo video { width: 100%; aspect-ratio: 16 / 9; }
   .demo-cap { margin-top: 12px; font-size: 13px; color: var(--slate-400); text-align: center; }
@@ -178,8 +187,8 @@
   <div class="container hero-in">
     <div>
       <div class="badge"><i aria-hidden="true"></i>MCP server for Claude · pilot open</div>
-      <h1>Your customer's logo on your blanks. <span class="accent">One conversation.</span></h1>
-      <p class="sub">ScalePOD works inside Claude. Drop in the logo, pick your blanks, and get exact-size mockups, a client review page and print-ready files for the whole kit.</p>
+      <h1>From customer brief to approved order. <span class="accent">No e-mail chains.</span></h1>
+      <p class="sub">Paste the brief into Claude. ScalePOD builds the kit on your blanks, sends your customer one review link, e-mails you the moment they answer, and has the print files ready for the order.</p>
       <div class="ctas">
         <a class="btn btn-primary" href="#demo">▶ Watch the 2-minute demo</a>
         <a class="btn btn-ghost" href="#access">Request access</a>
@@ -189,11 +198,27 @@
   </div>
 </header>
 
+<section class="slow">
+  <div class="container">
+    <div class="label">Where the time goes</div>
+    <h2>The slow part was never the mockup</h2>
+    <p class="lead">It is the brief in one e-mail, the PDF in another, the reply three days later and the second round after that. ScalePOD turns that chain into one conversation and one link.</p>
+    <div class="compare">
+      <div class="col before"><h3>Today</h3><ol>
+        <li>The brief arrives in an e-mail thread</li><li>Mockups are made one by one</li><li>A PDF goes out as an attachment</li>
+        <li>You wait, then chase for an answer</li><li>Feedback comes back scattered across replies</li><li>Another round, another wait, then the order</li></ol></div>
+      <div class="col after"><h3>With ScalePOD</h3><ol>
+        <li>Paste the brief into Claude</li><li>The whole kit appears on your blanks</li><li>Your customer gets one review link, no login</li>
+        <li>They tap Accept, Change or Reject per item</li><li>You get an e-mail the moment they answer</li><li>Accepted items come with print files, ready to order</li></ol></div>
+    </div>
+  </div>
+</section>
+
 <section id="demo" class="alt">
   <div class="container center">
     <div class="label">The demo</div>
-    <h2>A café crew kit, from logo to print files</h2>
-    <p class="lead">An account manager asks for six items for a new customer. ScalePOD places the logo, the team reviews, one item changes, and every placement comes with its files.</p>
+    <h2>A café crew kit, from brief to print files</h2>
+    <p class="lead">An account manager pastes a new customer's brief: six items. ScalePOD builds the kit, the review page collects the decisions, one item changes, and every accepted placement comes with its files.</p>
     <div class="demo">
       <video controls playsinline preload="metadata" poster="images/merch-mcp/poster.jpg" src="images/merch-mcp/scalepod-merch-demo.mp4" aria-label="ScalePOD Merch MCP demo, 2 minutes"></video>
     </div>
@@ -212,7 +237,7 @@
         <rect class="f-box" x="10" y="100" width="210" height="130" rx="16"/>
         <text class="f-t" x="115" y="150" text-anchor="middle">Your team</text>
         <text class="f-s" x="115" y="174" text-anchor="middle">in Claude</text>
-        <text class="f-s" x="115" y="196" text-anchor="middle">"Crew kit, six items"</text>
+        <text class="f-s" x="115" y="196" text-anchor="middle">paste the brief</text>
         <path class="f-ln" d="M222 165 H 282" marker-end="url(#a)"/>
         <rect class="f-core" x="290" y="40" width="380" height="250" rx="20"/>
         <text class="f-t" x="480" y="78" text-anchor="middle">ScalePOD MCP server</text>
@@ -236,7 +261,7 @@
         <text class="f-s" x="1020" y="174" text-anchor="middle">PSD · 300 dpi</text>
         <text class="f-s" x="1020" y="196" text-anchor="middle">mm sheet</text>
         <path class="f-ln" d="M820 252 C 820 300, 480 310, 480 292" stroke-dasharray="5 5" marker-end="url(#a)"/>
-        <text class="f-s" x="650" y="318" text-anchor="middle">a change redoes only that item</text>
+        <text class="f-s" x="650" y="318" text-anchor="middle">e-mail to you when they answer · a change redoes only that item</text>
       </svg>
     </div>
   </div>
@@ -248,8 +273,8 @@
     <h2>What happens in the conversation</h2>
     <div class="steps">
       <div class="step">
-        <div class="step-copy"><div class="num">01</div><h3>The exact logo, approved by a person</h3>
-          <p>Upload the file or point to the customer's site. ScalePOD keeps that exact file and its colours, shows it back, and waits for a yes. The logo is never redrawn by AI.</p></div>
+        <div class="step-copy"><div class="num">01</div><h3>The brief becomes a kit</h3>
+          <p>Paste the customer's e-mail or brief and attach the logo, or point to their site. Claude sets up the items, sizes and decoration; ScalePOD keeps the exact logo file, shows it back and waits for your yes.</p></div>
         <img class="shot" src="images/merch-mcp/logo.jpg" loading="lazy" width="1280" height="619" alt="Claude chat: the assistant shows the saved logo and three brand colours and asks the account manager to confirm">
       </div>
       <div class="step">
@@ -258,18 +283,18 @@
         <img class="shot" src="images/merch-mcp/kit.jpg" loading="lazy" width="1280" height="619" alt="Six products with the logo placed at their sizes">
       </div>
       <div class="step">
-        <div class="step-copy"><div class="num">03</div><h3>One private review page</h3>
-          <p>The team, or the end customer, marks every mockup Accept, Change or Reject on a phone or laptop. No logins, no e-mail chains.</p></div>
+        <div class="step-copy"><div class="num">03</div><h3>One review link for your customer</h3>
+          <p>Check it internally first, then forward one link. Your customer marks every item Accept, Change or Reject on a phone, with a note in plain words. No logins, no attachments, and you get an e-mail the moment they send their decisions.</p></div>
         <img class="shot" src="images/merch-mcp/review.jpg" loading="lazy" width="1280" height="619" alt="Review page with Accept, Change and Reject buttons under each mockup">
       </div>
       <div class="step">
-        <div class="step-copy"><div class="num">04</div><h3>A change, in plain words</h3>
-          <p>"The small copper mark, not the full logo." Only that item is redone; everything accepted stays as it is.</p></div>
+        <div class="step-copy"><div class="num">04</div><h3>Changes collected, not chased</h3>
+          <p>"The small copper mark, not the full logo." The note arrives with the decision, only that item is redone, and the next round goes out on the same link.</p></div>
         <img class="shot" src="images/merch-mcp/change.jpg" loading="lazy" width="1280" height="619" alt="The apron marked Change with a written note, the other items accepted">
       </div>
       <div class="step">
-        <div class="step-copy"><div class="num">05</div><h3>Files for every placement</h3>
-          <p>A layered Photoshop file, the logo at print size in 300 dpi and a placement sheet in millimetres, ready for your embroiderer or printer.</p></div>
+        <div class="step-copy"><div class="num">05</div><h3>Approved means ready to order</h3>
+          <p>Every accepted item has its files: a layered Photoshop file, the logo at print size in 300 dpi and a placement sheet in millimetres, ready for your embroiderer or printer.</p></div>
         <img class="shot" src="images/merch-mcp/files.jpg" loading="lazy" width="1280" height="619" alt="Print packs for polo, crewneck, apron and cap, each with a layered PSD, a 300 dpi logo and a placement sheet">
       </div>
     </div>
@@ -299,7 +324,7 @@
       <div><b>±0.56 mm</b><span>placement error, measured on the live server</span></div>
       <div><b>0</b><span>logos redrawn: the exact file is placed by geometry</span></div>
       <div><b>$0</b><span>for a failed or refused render: you pay only for what you keep</span></div>
-      <div><b>1 item</b><span>redone on a change; accepted items stay untouched</span></div>
+      <div><b>1 link</b><span>for every round with your customer; decisions and notes come back to you by e-mail</span></div>
     </div>
   </div>
 </section>
@@ -335,7 +360,7 @@
       <div><dt>What do I need?</dt><dd>A Claude plan that allows custom connectors. We send you the connector link and an invite; setup takes a few minutes.</dd></div>
       <div><dt>Can I use my own blanks?</dt><dd>Yes. Upload product photos or import them from your shop; ScalePOD measures each blank once so every placement lands at its real size.</dd></div>
       <div><dt>Does AI touch the logo?</dt><dd>No. The approved file is placed by geometry. AI is used only for scenes, garment colours and sharpening the blank, and those are labelled.</dd></div>
-      <div><dt>Who sees the review page?</dt><dd>Only the people you send the link to. Your end customer never receives anything from us; you forward the page yourself.</dd></div>
+      <div><dt>How do I know my customer has answered?</dt><dd>You get an e-mail the moment they send their decisions, with what they accepted, what they want changed and their notes. The link goes from you, not from us.</dd></div>
     </dl>
   </div>
 </section>
